@@ -21,7 +21,7 @@ class Login extends Model
     }
     //taking data from pengguna_project database to check admin
     public function isAdmin($username) {
-        $adminCount = DB::table('user')->where('username', $username)->where('Status', 'admin')->count();
+        $adminCount = DB::table('pengguna_project')->where('username', $username)->where('Status', 'admin')->count();
         return $adminCount > 0;
     }
 }
